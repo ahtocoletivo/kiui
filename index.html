@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Kiui - UI para Pizzarias</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+	<style>
+	<button { padding: 15px; font-size: 12px; background: indianred; color: #FFF; border: none }
+	.subheading { font-style: italic }
+</style>
+</head>
+<body style="background-color: #F5EFE6;">
+	<section class="grid">
+		<div class="wrap">
+			<div class="um" style="padding: 1.5em;">
+				<div class="card rounded" data-target="tamanho" data-toggle="modal">
+					<div style="display: grid; grid-template-columns: 3em 1fr;">	
+						<img src="img/pizza-grande.svg" style="width: 48px;">
+						<div style="padding-left: 1.5em; align-content: center; display: grid;">
+							<label>
+								Grande
+							</label>
+							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+						</div>
+					</div>
+				</div>
+				<div class="card rounded txt-center" data-target="numeroSabores" data-toggle="modal">
+					2 Sabores
+				</div>
+				<div class="tabua">
+					<img src="img/tabua.png" class="img-fluid">
+					<div class="pizza">
+						<div class="sabor1" data-target="sabor1" data-toggle="modal">
+							<i class="material-icons move" style="font-size: 3em; color: #fff;" data-target="sabor1" data-toggle="modal">
+								touch_app
+							</i>
+						</div>
+						<div class="sabor2" data-target="sabor2" data-toggle="modal">
+						</div>
+					</div>
+				</div>
+				<div class="card rounded txt-center" data-target="tipoMassa" data-toggle="modal">
+					Massa Tradicionail
+				</div>
+				<div class="card rounded txt-center" data-target="tipoBorda" data-toggle="modal">
+					Borda Catupiry
+				</div>
+				<div class="txt-center">
+					<a href="checkout.html">
+						<h2>Subtotal</h2>
+						<button class="btn-primary fluid">
+							Comprar
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--Modais-->
+
+<div id="tamanho" class="modal">
+	<div class="wrap">
+		<div class="um" style="padding: 1.5em;">
+			<div class="card rounded" data-dismiss="modal">
+				<div style="display: grid; grid-template-columns: 3em 1fr;">	
+					<img src="img/pizza-grande.svg" style="width: 48px;">
+					<div style="padding-left: 1.5em; align-content: center; display: grid;">
+						<label>
+							Média
+						</label>
+						<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+					</div>
+				</div>
+			</div>
+			<div class="card rounded" data-dismiss="modal">
+				<div style="display: grid; grid-template-columns: 3em 1fr;">	
+					<img src="img/pizza-grande.svg" style="width: 48px;">
+					<div style="padding-left: 1.5em; align-content: center; display: grid;">
+						<label>
+							Grande
+						</label>
+						<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+					</div>
+				</div>
+			</div>
+			<div class="card rounded" data-dismiss="modal">
+				<div style="display: grid; grid-template-columns: 3em 1fr;">	
+					<img src="img/pizza-grande.svg" style="width: 48px;">
+					<div style="padding-left: 1.5em; align-content: center; display: grid;">
+						<label>
+							Gigante
+						</label>
+						<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="nav-inferior">
+		<button data-dismiss="modal" class="botao-acao">
+			Fechar
+		</button>
+	</nav>
+</div>
+
+<div id="numeroSabores" class="modal">
+	<div class="wrap">
+		<div class="um" style="padding: 1.5em;">
+			<div class="card rounded" data-dismiss="modal">
+				1 Sabores
+			</div>
+			<div class="card rounded" data-dismiss="modal">
+				2 Sabores
+			</div>
+			<div class="card rounded" data-dismiss="modal">
+				3 Sabores
+			</div>
+		</div>
+	</div>
+	<nav class="nav-inferior">
+		<button data-dismiss="modal" class="botao-acao">
+			Fechar
+		</button>
+	</nav>
+</div>
+
+<div id="sabor1" class="modal">
+	<ul class="cardapio">
+		<li data-dismiss="modal">
+			<div class="descricao">
+				<h2>Titulo</h2>
+				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<img src="img/pizza1.png" class="img-fluid">
+		</li>
+		<li data-dismiss="modal">
+			<div class="descricao">
+				<h2>Titulo</h2>
+				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<img src="img/pizza1.png" class="img-fluid">
+		</li>
+		<li data-dismiss="modal">
+			<div class="descricao">
+				<h2>Titulo</h2>
+				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<img src="img/pizza1.png" class="img-fluid">
+		</li>
+		<li data-dismiss="modal">
+			<div class="descricao">
+				<h2>Titulo</h2>
+				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<img src="img/pizza1.png" class="img-fluid">
+		</li>
+		<li data-dismiss="modal">
+			<div class="descricao">
+				<h2>Titulo</h2>
+				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<img src="img/pizza1.png" class="img-fluid">
+		</li>
+	</ul>
+	<nav class="nav-inferior">
+		<button data-dismiss="modal" class="botao-acao">
+			Fechar
+		</button>
+	</nav>
+	<script type="application/javascript" src="js.js"></script>
+</body>
+</html> 
