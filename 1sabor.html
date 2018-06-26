@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+  <head>
+    <script type="application/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/1sabor.css" />
+    <script>
+      var current;
+      var lock = false;
+
+      function check(wich) {
+        if (lock) {
+          return true;
+        }
+        lock = true;
+        window.setTimeout(function() {
+          snap(wich);
+          lock = false;
+        }, 1000);
+      }
+
+      function snap(wich) {
+        current = parseInt(($('#sabor' + wich).scrollTop() + vw(30)) / (vw(60) + 10));
+        $('#sabor' + wich).animate({
+          scrollTop: (vw(60) + 10) * current
+        }, 200);
+      }
+
+      function vh(v) {
+        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        return (v * h) / 100;
+      }
+
+      function vw(v) {
+        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        return (v * w) / 100;
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <div class="left menu">
+        <p>
+          1 Sabor
+        </p>
+        <div id="selected-menu">
+        </div>
+      </div>
+      <div class="right menu">
+        <p>
+          <a href="index.html">2 Sabores</a>
+        </p>
+      </div>
+    </div>
+    <div class="coiso">
+      <div id="sabor1" onscroll="check(1);">
+        <img class="sabor" id="1" src="pep.png" />
+        <img class="sabor" id="1" src="pep.png" />
+        <img class="sabor" id="1" src="pep.png" />
+        <img class="sabor" id="1" src="pep.png" />
+        <img class="sabor" id="1" src="pep.png" />
+      </div>
+    </div>
+    <div class="coiso">
+      <div class="sabor-desc">
+        <h1>
+          Calabresa
+        </h1> <br><span>cebola milho brocolis <br>cimento feijao</span>
+      </div>
+    </div>
+    <div>
+      <div id="cta"><span>R$ 35</span>
+        <button>
+            Continuar
+          </button>
+      </div>
+    </div>
+  </body>
+
+</html>
