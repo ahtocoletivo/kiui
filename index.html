@@ -32,9 +32,11 @@
 				<div class="card rounded txt-center" data-target="numeroSabores" data-toggle="modal">
 					2 Sabores
 				</div>
+
+
 				<div class="tabua">
 					<img src="img/tabua.png" class="img-fluid">
-					<div class="pizza">
+<!-- 					<div class="pizza">
 						<div class="sabor1" data-target="sabor1" data-toggle="modal">
 							<i class="material-icons move" style="font-size: 3em; color: #fff;" data-target="sabor1" data-toggle="modal">
 								touch_app
@@ -42,8 +44,42 @@
 						</div>
 						<div class="sabor2" data-target="sabor2" data-toggle="modal">
 						</div>
+					</div> -->
+					<div class="pizza">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 344">
+
+							<defs>
+
+								<pattern id="sabor1" patternUnits="userSpaceOnUse" width="100%" height="100%">
+									<image xlink:href="img/pizza.png" x="0" y="-22" width="100%" height="100%" />
+								</pattern>
+
+								<pattern id="sabor2" patternUnits="userSpaceOnUse" width="100%" height="100%">
+									<image xlink:href="img/pizza.png" x="-72" y="0" width="100%" height="100%" />
+								</pattern>
+
+								<pattern id="sabor3" patternUnits="userSpaceOnUse" width="100%" height="100%">
+									<image xlink:href="img/pizza.png" x="-72" y="-144" width="100%" height="100%" />
+								</pattern>
+
+								<style>.a{fill:url(#sabor1);}.b{fill:url(#sabor2);}.c{fill:url(#sabor3);}</style>
+
+							</defs>
+
+							<g transform="translate(-512 -208)">
+
+								<path d="M27.361,236.658m-4.838,2.689a168.235,168.235,0,0,0,62.9,62.93l86.555-148.989L85.961,4.3C4.244,51.632-24.249,157.591,22.523,239.347Z" transform="translate(511.987 226.828)" fill="url(#sabor1)" data-target="sabores" data-toggle="modal"/>
+
+								<path d="M102.017,5.379m0-5.379A173.3,173.3,0,0,0,16,23.128l86.017,148.989H274.052C274.052,77.453,196.1,0,102.017,0Z" transform="translate(581.948 208)" fill="url(#sabor2)" data-target="sabores" data-toggle="modal"/>
+
+								<path d="M246.1,115.369m4.838,2.689A173.512,173.512,0,0,0,274.052,32H102.017L16,180.989c81.717,47.332,187.625,18.825,234.935-62.93Z" transform="translate(581.948 348.117)" fill="url(#sabor3)" data-target="sabores" data-toggle="modal"/>
+								
+							</g>
+						</svg>
 					</div>
 				</div>
+
+
 				<div class="card rounded txt-center" data-target="tipoMassa" data-toggle="modal">
 					Massa Tradicionail
 				</div>
@@ -134,7 +170,7 @@
 	</nav>
 </div>
 
-<div id="sabor1" class="modal">
+<div id="sabores" class="modal">
 	<ul class="cardapio">
 		<li data-dismiss="modal">
 			<div class="descricao">
@@ -177,6 +213,77 @@
 			Fechar
 		</button>
 	</nav>
-	<script type="application/javascript" src="js.js"></script>
+</div>
+
+<div id="tipoMassa" class="modal">
+	<div class="wrap">
+		<div class="um" style="padding: 1.5em;">
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Tradicional
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Vegana
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Integral
+			</div>
+		</div>
+	</div>
+	<nav class="nav-inferior">
+		<button data-dismiss="modal" class="botao-acao">
+			Fechar
+		</button>
+	</nav>
+</div>
+
+<div id="tipoBorda" class="modal">
+	<div class="wrap">
+		<div class="um" style="padding: 1.5em;">
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Catupiry
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Cheddar
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Chocolate
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Nenhum
+			</div>
+		</div>
+	</div>
+	<nav class="nav-inferior">
+		<button data-dismiss="modal" class="botao-acao">
+			Fechar
+		</button>
+	</nav>
+</div>
+
+<div id="ingredientes" class="modal">
+	<div class="wrap">
+		<div class="um" style="padding: 1.5em;">
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Catupiry
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Cheddar
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Chocolate
+			</div>
+			<div class="card rounded txt-center" data-dismiss="modal">
+				Nenhum
+			</div>
+		</div>
+	</div>
+	<nav class="nav-inferior">
+		<button data-dismiss="modal" class="botao-acao">
+			Fechar
+		</button>
+	</nav>
+</div>
+
+<script type="application/javascript" src="js.js"></script>
 </body>
 </html> 
