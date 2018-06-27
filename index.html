@@ -32,8 +32,13 @@
 				<div class="card rounded txt-center" data-target="numeroSabores" data-toggle="modal">
 					2 Sabores
 				</div>
+			</div>
+		</div>
+	</section>
 
-
+	<section class="grid">
+		<div class="wrap">
+			<div class="um">
 				<div class="tabua">
 					<img src="img/tabua.png" class="img-fluid">
 <!-- 					<div class="pizza">
@@ -55,11 +60,11 @@
 								</pattern>
 
 								<pattern id="sabor2" patternUnits="userSpaceOnUse" width="100%" height="100%">
-									<image xlink:href="img/pizza.png" x="-72" y="0" width="100%" height="100%" />
+									<image xlink:href="img/pizza2.png" x="-72" y="0" width="100%" height="100%" />
 								</pattern>
 
 								<pattern id="sabor3" patternUnits="userSpaceOnUse" width="100%" height="100%">
-									<image xlink:href="img/pizza.png" x="-72" y="-144" width="100%" height="100%" />
+									<image xlink:href="img/pizza3.png" x="-72" y="-144" width="100%" height="100%" />
 								</pattern>
 
 								<style>.a{fill:url(#sabor1);}.b{fill:url(#sabor2);}.c{fill:url(#sabor3);}</style>
@@ -78,8 +83,12 @@
 						</svg>
 					</div>
 				</div>
-
-
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="wrap">
+			<div class="um" style="padding: 1.5em;">
 				<div class="card rounded txt-center" data-target="tipoMassa" data-toggle="modal">
 					Massa Tradicionail
 				</div>
@@ -96,194 +105,193 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<!--Modais-->
+	<!--Modais-->
 
-<div id="tamanho" class="modal">
-	<div class="wrap">
-		<div class="um" style="padding: 1.5em;">
-			<div class="card rounded" style="position: relative;">
-				<div class="gambis" data-dismiss="modal"></div>
-				<div style="display: grid; grid-template-columns: 3em 1fr;">	
-					<img src="img/pizza-grande.svg" style="width: 48px;">
-					<div style="padding-left: 1.5em; align-content: center; display: grid;">
-						<label>
-							Média
-						</label>
-						<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+	<div id="tamanho" class="modal">
+		<div class="wrap">
+			<div class="um" style="padding: 1.5em;">
+				<div class="card rounded" style="position: relative;">
+					<div class="gambis" data-dismiss="modal"></div>
+					<div style="display: grid; grid-template-columns: 3em 1fr;">	
+						<img src="img/pizza-grande.svg" style="width: 48px;">
+						<div style="padding-left: 1.5em; align-content: center; display: grid;">
+							<label>
+								Média
+							</label>
+							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+						</div>
+					</div>
+				</div>
+				<div class="card rounded" style="position: relative;">
+					<div class="gambis" data-dismiss="modal"></div>
+					<div style="display: grid; grid-template-columns: 3em 1fr;">	
+						<img src="img/pizza-grande.svg" style="width: 48px;">
+						<div style="padding-left: 1.5em; align-content: center; display: grid;">
+							<label>
+								Grande
+							</label>
+							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+						</div>
+					</div>
+				</div>
+				<div class="card rounded" style="position: relative;">
+					<div class="gambis" data-dismiss="modal"></div>
+					<div style="display: grid; grid-template-columns: 3em 1fr;">	
+						<img src="img/pizza-grande.svg" style="width: 48px;">
+						<div style="padding-left: 1.5em; align-content: center; display: grid;">
+							<label>
+								Gigante
+							</label>
+							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="card rounded" style="position: relative;">
-				<div class="gambis" data-dismiss="modal"></div>
-				<div style="display: grid; grid-template-columns: 3em 1fr;">	
-					<img src="img/pizza-grande.svg" style="width: 48px;">
-					<div style="padding-left: 1.5em; align-content: center; display: grid;">
-						<label>
-							Grande
-						</label>
-						<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
-					</div>
+		</div>
+		<nav class="nav-inferior">
+			<button data-dismiss="modal" class="botao-acao">
+				Fechar
+			</button>
+		</nav>
+	</div>
+
+	<div id="numeroSabores" class="modal">
+		<div class="wrap">
+			<div class="um" style="padding: 1.5em;">
+				<div class="card rounded" data-dismiss="modal">
+					1 Sabores
 				</div>
-			</div>
-			<div class="card rounded" style="position: relative;">
-				<div class="gambis" data-dismiss="modal"></div>
-				<div style="display: grid; grid-template-columns: 3em 1fr;">	
-					<img src="img/pizza-grande.svg" style="width: 48px;">
-					<div style="padding-left: 1.5em; align-content: center; display: grid;">
-						<label>
-							Gigante
-						</label>
-						<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
-					</div>
+				<div class="card rounded" data-dismiss="modal">
+					2 Sabores
+				</div>
+				<div class="card rounded" data-dismiss="modal">
+					3 Sabores
 				</div>
 			</div>
 		</div>
+		<nav class="nav-inferior">
+			<button data-dismiss="modal" class="botao-acao">
+				Fechar
+			</button>
+		</nav>
 	</div>
-	<nav class="nav-inferior">
-		<button data-dismiss="modal" class="botao-acao">
-			Fechar
-		</button>
-	</nav>
-</div>
 
-<div id="numeroSabores" class="modal">
-	<div class="wrap">
-		<div class="um" style="padding: 1.5em;">
-			<div class="card rounded" data-dismiss="modal">
-				1 Sabores
-			</div>
-			<div class="card rounded" data-dismiss="modal">
-				2 Sabores
-			</div>
-			<div class="card rounded" data-dismiss="modal">
-				3 Sabores
+	<div id="sabores" class="modal">
+		<ul class="cardapio">
+			<li data-dismiss="modal">
+				<div class="descricao">
+					<h2>Titulo</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+			<li data-dismiss="modal">
+				<div class="descricao">
+					<h2>Titulo</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+			<li data-dismiss="modal">
+				<div class="descricao">
+					<h2>Titulo</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+			<li data-dismiss="modal">
+				<div class="descricao">
+					<h2>Titulo</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+			<li data-dismiss="modal">
+				<div class="descricao">
+					<h2>Titulo</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+		</ul>
+		<nav class="nav-inferior">
+			<button data-dismiss="modal" class="botao-acao">
+				Fechar
+			</button>
+		</nav>
+	</div>
+
+	<div id="tipoMassa" class="modal">
+		<div class="wrap">
+			<div class="um" style="padding: 1.5em;">
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Tradicional
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Vegana
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Integral
+				</div>
 			</div>
 		</div>
+		<nav class="nav-inferior">
+			<button data-dismiss="modal" class="botao-acao">
+				Fechar
+			</button>
+		</nav>
 	</div>
-	<nav class="nav-inferior">
-		<button data-dismiss="modal" class="botao-acao">
-			Fechar
-		</button>
-	</nav>
-</div>
 
-<div id="sabores" class="modal">
-	<ul class="cardapio">
-		<li data-dismiss="modal">
-			<div class="descricao">
-				<h2>Titulo</h2>
-				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-			</div>
-			<img src="img/pizza1.png" class="img-fluid">
-		</li>
-		<li data-dismiss="modal">
-			<div class="descricao">
-				<h2>Titulo</h2>
-				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-			</div>
-			<img src="img/pizza1.png" class="img-fluid">
-		</li>
-		<li data-dismiss="modal">
-			<div class="descricao">
-				<h2>Titulo</h2>
-				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-			</div>
-			<img src="img/pizza1.png" class="img-fluid">
-		</li>
-		<li data-dismiss="modal">
-			<div class="descricao">
-				<h2>Titulo</h2>
-				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-			</div>
-			<img src="img/pizza1.png" class="img-fluid">
-		</li>
-		<li data-dismiss="modal">
-			<div class="descricao">
-				<h2>Titulo</h2>
-				<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-			</div>
-			<img src="img/pizza1.png" class="img-fluid">
-		</li>
-	</ul>
-	<nav class="nav-inferior">
-		<button data-dismiss="modal" class="botao-acao">
-			Fechar
-		</button>
-	</nav>
-</div>
-
-<div id="tipoMassa" class="modal">
-	<div class="wrap">
-		<div class="um" style="padding: 1.5em;">
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Tradicional
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Vegana
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Integral
+	<div id="tipoBorda" class="modal">
+		<div class="wrap">
+			<div class="um" style="padding: 1.5em;">
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Catupiry
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Cheddar
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Chocolate
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Nenhum
+				</div>
 			</div>
 		</div>
+		<nav class="nav-inferior">
+			<button data-dismiss="modal" class="botao-acao">
+				Fechar
+			</button>
+		</nav>
 	</div>
-	<nav class="nav-inferior">
-		<button data-dismiss="modal" class="botao-acao">
-			Fechar
-		</button>
-	</nav>
-</div>
 
-<div id="tipoBorda" class="modal">
-	<div class="wrap">
-		<div class="um" style="padding: 1.5em;">
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Catupiry
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Cheddar
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Chocolate
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Nenhum
+	<div id="ingredientes" class="modal">
+		<div class="wrap">
+			<div class="um" style="padding: 1.5em;">
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Catupiry
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Cheddar
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Chocolate
+				</div>
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Nenhum
+				</div>
 			</div>
 		</div>
+		<nav class="nav-inferior">
+			<button data-dismiss="modal" class="botao-acao">
+				Fechar
+			</button>
+		</nav>
 	</div>
-	<nav class="nav-inferior">
-		<button data-dismiss="modal" class="botao-acao">
-			Fechar
-		</button>
-	</nav>
-</div>
 
-<div id="ingredientes" class="modal">
-	<div class="wrap">
-		<div class="um" style="padding: 1.5em;">
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Catupiry
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Cheddar
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Chocolate
-			</div>
-			<div class="card rounded txt-center" data-dismiss="modal">
-				Nenhum
-			</div>
-		</div>
-	</div>
-	<nav class="nav-inferior">
-		<button data-dismiss="modal" class="botao-acao">
-			Fechar
-		</button>
-	</nav>
-</div>
-
-<script type="application/javascript" src="js.js"></script>
+	<script type="application/javascript" src="js.js"></script>
 </body>
 </html> 
