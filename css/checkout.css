@@ -1,0 +1,82 @@
+.back {
+  width: 8.33vw;
+  color: #222222;
+  opacity: 0.33;
+  float: left;
+}
+
+#container {
+  padding: 9vw 0 0 0;
+}
+
+h1 span {
+  color: #222222;
+  opacity: 0.5;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background-color: #fff;
+  color: #000;
+  padding: 2vw 4vw;
+  margin: 2px;
+  border-radius: 50vw;
+  font-size: 2vh;
+  border: 1px solid #babaca;
+}
+
+input[type="radio"]:checked+label {
+  background-color: #E62E3D;
+}
+
+#head{
+  position: fixed;
+  color: #222222;
+  width: 100vw;
+  background-color: #fff;
+  height: 8.33vw;
+  display: flex;
+  align-items: center;
+  box-shadow: 1vw 1vw 2vw 0.2vw #eee;
+  top: 0;
+}
+
+#head .title {
+  width: 100vw;
+  position: absolute;
+  font-size: 4vw;
+  text-align: center;
+  margin: 0;
+}
+
+#fixed-bottom {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.pizza {
+  width: 15vw;
+  height: 15vw;
+  float: left;
+}
+.sabor {
+  height: 15vw;
+  margin: 0;
+  padding: 0;
+  width: 7.5vw;
+}
+
+.sec {
+  width: 100vw;
+}
+
+.title {
+  text-align: left;
+  margin: 3vw;
+}

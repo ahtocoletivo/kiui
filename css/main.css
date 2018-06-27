@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+html, body {
+  border: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3vh;
+  font-weight: 300;
+}
+
+.left {
+  background-color: #fff;
+  text-align: right;
+}
+
+.right {
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.);
+}
+
+.coiso {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+}
+
+.menu {
+  height: 15vw;
+  display: inline-block;
+  width: 40vw;
+  text-align: center;
+}
+
+.menu .left {
+  float:left;
+  width: 40vw;
+}
+
+.menu .right {
+  float: right;
+  width: 40vw;
+}
+.menu a {
+  text-decoration: none;
+}
+.menu p {
+  font-size: 3vh;
+  font-weight: 100;
+}
+.sabor {
+  margin: 5px 0;
+}
+.sabor:last-child {
+    margin: 5px 0 40px 0;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+#sabor1, #sabor2 {
+  height: 65vw;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 7vh 0;
+}
+
+#sabor1 img {
+  float: right;
+}
+
+#sabor2 img {
+  float: left;
+}
+
+#sabor2 img,
+#sabor1 img {
+  width: 30vw;
+  height: 60vw;
+}
+
+#selected-menu {
+  margin: 1vw 0 0 0;
+  width: 25vw;
+  height: 2vw;
+  background-color: #E62E3D;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.sabor-desc {
+  margin: 2vw 2vw;
+}
+
+.sabor-desc span {
+  font-size: 2vh;
+  font-weight: 100;
+}
+
+#cta {
+  margin: 2vw;
+  border-radius: 60px;
+  box-shadow: 1vw 1vw 2vw 0.2vw #ddd;
+}
+
+#cta button {
+  float: right;
+  text-transform: uppercase;
+  border: none;
+  background-color: #E62E3D;
+  color: #fff;
+  padding: 2vw 4vw;
+  margin: 2px;
+  border-radius: 50vw;
+  font-size: 2vh;
+}
+
+#cta span {
+  float: left;
+  text-transform: uppercase;
+  border: none;
+  color: #000;
+  padding: 2vw 4vw;
+  font-size: 2vh;
+  margin: 2px;
+}

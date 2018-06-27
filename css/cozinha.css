@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 0 0 10px 0;
+  width: 100%;
+  min-height: 40px;
+  text-align: left;
+  padding: 5px;
+}
+
+.id {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FF5500;
+}
+
+.hora {
+  font-size: 24px;
+  font-weight: 200;
+  color: #aaa;
+  text-align: left;
+}
+
+.concluir {
+  text-align: right;
+}
+
+.concluir button {
+  border: none;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 21px;
+  height: 100%;
+  min-height: 40px;
+  width: 50%;
+  margin: 0 0 0 auto;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.item {
+  font-size: 28px;
+  font-weight: 600;
+  color: #FF5500;
+}
+
+.prop {
+  font-size: 1.8em;
+  font-weight: 200;
+  color: #aaa;
+}
+
+.sabor {
+  font-size: 28px;
+  font-weight: 200;
+  color: #000;
+}
+
+.obs {
+  font-size: 28px;
+  padding: 5px 0;
+  font-weight: 200;
+  color: #000;
+  color: #FF5500;
+}
+
+.col {
+  background-color: #ccc;
+  padding: 10px;
+  height: 100vh;
+}
+
+#container {
+  padding: 0 5px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.divisor {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  border-radius: 90px;
+  border: none;
+}
+
+.item,
+.prop,
+.sabor {
+  border-top: 1px solid #ccc;
+}

@@ -1,0 +1,58 @@
+-- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
+--
+-- Host: localhost    Database: pizza
+-- ------------------------------------------------------
+-- Server version	5.7.22-0ubuntu0.16.04.1-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Pedido`
+--
+
+DROP TABLE IF EXISTS `Pedido`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Pedido` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Cliente` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `endereco` varchar(511) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `forma_de_pg` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `troco` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `desc` varchar(1023) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `obs` varchar(1023) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) DEFAULT NULL,
+  `custo` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Pedido`
+--
+
+LOCK TABLES `Pedido` WRITE;
+/*!40000 ALTER TABLE `Pedido` DISABLE KEYS */;
+INSERT INTO `Pedido` VALUES (1,'LucasMordzin','Alameda dos anjos 934','Cartao de crebito','NA','pizza de pizzassssssss <3','com pirulitos',NULL,NULL),(2,'AYYYYYYYYYYYYYY Mordzin','Alameda do jooj','CASH AND HOES','45','pizza de piasasasazzassssssss <3','com pirulitasos',NULL,NULL),(3,'Brenda Fontes','Biguacu, Rua Santos Palmeira, 300 Ap 919','Dinheiro','100','Meia Calabresa Meia Mussarela GRANDE + Coca ZERO (Brinde)','Queijo sem lactose',2,52);
+/*!40000 ALTER TABLE `Pedido` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-06-09 18:15:27
