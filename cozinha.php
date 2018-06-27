@@ -59,13 +59,18 @@ $n_de_pedidos = count($pedido);
             }
             ?>
           </td>
-          <td class="sabor">
+          <td class="sabor" colspan="2">
             <?php for($j = 0;$j < $n_de_pedidos;$j++){
               if($pedido[$i]['pizza_id'] == $pedido[$j]['pizza_id'])
                 echo $pedido[$j]['nome']."<br>";
               }
               ?>
           </td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td></td>
+          <td class="obs" colspan="2"><?php echo "- Borda de " . $pedido[$i]['borda'] . "<br>";?></td>
         </tr>
       <?php
     }else{ ?>
@@ -81,13 +86,18 @@ $n_de_pedidos = count($pedido);
           }
           ?>
         </td>
-        <td class="sabor">
+        <td class="sabor" colspan="2">
           <?php for($j = 0;$j < $n_de_pedidos;$j++){
             if($pedido[$i]['pizza_id'] == $pedido[$j]['pizza_id'])
               echo $pedido[$j]['nome']."<br>";
             }
             ?>
         </td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td></td>
+        <td class="obs" colspan="2"><?php echo "- Borda de " . $pedido[$i]['borda'] . "<br>";?></td>
       </tr>
   <?php }} ?>
     </div>
