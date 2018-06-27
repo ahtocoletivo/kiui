@@ -1,0 +1,16 @@
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 344">
+
+  	<defs>
+  		<pattern id="img1" patternUnits="userSpaceOnUse" width="100%" height="100%">
+  			<image xlink:href="img/pizza1.png" x="-48" y="0" width="360" height="360" />
+  		</pattern>
+  		<style>.a{fill:url(#img1);}.b{fill:#009fe3;}.c{fill:#ccff00;}</style>
+
+  	</defs>
+
+  	<g transform="translate(-512 -208)">
+  		<path class="a" d="M27.361,236.658m-4.838,2.689a168.235,168.235,0,0,0,62.9,62.93l86.555-148.989L85.961,4.3C4.244,51.632-24.249,157.591,22.523,239.347Z" transform="translate(511.987 226.828)"/>
+  		<path class="b" d="M102.017,5.379m0-5.379A173.3,173.3,0,0,0,16,23.128l86.017,148.989H274.052C274.052,77.453,196.1,0,102.017,0Z" transform="translate(581.948 208)"/>
+  		<path class="c" d="M246.1,115.369m4.838,2.689A173.512,173.512,0,0,0,274.052,32H102.017L16,180.989c81.717,47.332,187.625,18.825,234.935-62.93Z" transform="translate(581.948 348.117)" fill="url(#img1)"/>
+  	</g>
+  </svg>
