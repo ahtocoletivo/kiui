@@ -26,7 +26,7 @@ $n_de_pedidos = count($pedido);
   <?php
   for($i = 1;$i < $n_de_pedidos;$i++){
     if($i != 1 && $last_id != $pedido[$i]['ID']) echo "   </table>";
-    if($last_id != $pedido[$i]['ID']){
+    if($last_id != $pedido[$i]['ID'] && $pedido[$i]['status'] == 1){
       $last_id = $pedido[$i]['ID'];
       ?>
       <table class="card">
@@ -39,7 +39,12 @@ $n_de_pedidos = count($pedido);
           </td>
           <td></td>
           <td></td>
-          <td class="concluir"> <button>
+          <td class="concluir">
+            <button onclick='
+            $.ajax({
+              url: "<?php echo "http://pizza.ahto.digital/apir.php?update=1&status=2&id=" . $pedido[$i]['ID'];?>"
+            });
+            window.location.reload(true);'>
               <i class="material-icons" style="color:#29CCB1; ">
                 check
               </i>
@@ -73,7 +78,10 @@ $n_de_pedidos = count($pedido);
           <td class="obs" colspan="2"><?php echo "- Borda de " . $pedido[$i]['borda'] . "<br>";?></td>
         </tr>
       <?php
-    }else{ ?>
+    }else{
+      if($pedido[$i]['status'] == 1){
+      ?>
+
       <tr>
         <td class="item" colspan="2">
           <?php echo $pedido[$i]['pizza_id'] . " " . $pedido[$i]['tamanho']; ?>
@@ -99,7 +107,7 @@ $n_de_pedidos = count($pedido);
         <td></td>
         <td class="obs" colspan="2"><?php echo "- Borda de " . $pedido[$i]['borda'] . "<br>";?></td>
       </tr>
-  <?php }} ?>
+  <?php }}} ?>
     </div>
   </body>
   <script type="application/javascript" src="js/jquery.js"></script>
