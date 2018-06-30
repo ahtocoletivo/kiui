@@ -27,5 +27,12 @@
 var userName = $("#userName").val();
 var userEmail = $("#userEmail").val();
 var userPhone = $("#userPhone").val();
+var userZipcode = $("#userZipcode").val();
+var userCity = $("#userCity").val();
+var userDistrict = $("#userDistrict").val();
+var userStreet = $("#userStreet").val();
+var userStreetNumber = $("#userStreetNumber").val();
+var userComplement = $("#userComplement").val();
 
-var pedido = {userName: userName, userEmail: userEmail, userPhone: userPhone};
+var pedido = {userName: userName, userEmail: userEmail};
+var userAdress = {userZipcode: userZipcode, userCity: userCity, userDistrict: userDistrict, userStreet: userStreet, userStreetNumber: userStreetNumber, userComplement : userComplement};
