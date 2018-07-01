@@ -8,9 +8,9 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  	<script type="application/javascript" src="pizzas.js" defer></script>
+  	<script type="application/javascript" src="js.js" defer></script>
 
 	<style>
 	<button { padding: 15px; font-size: 12px; background: indianred; color: #FFF; border: none }
@@ -22,19 +22,15 @@
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
 				<div class="card rounded" style="position: relative;">
-					<div class="gambis" data-target="tamanho" data-toggle="modal"></div>
+					<div class="gambis" data-target="tamanhoPizza" data-toggle="modal"></div>
 					<div style="display: grid; grid-template-columns: 3em 1fr;">	
 						<img src="img/pizza-grande.svg" style="width: 48px;">
 						<div style="padding-left: 1.5em; align-content: center; display: grid;">
-							<label>
-								Grande
-							</label>
-							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+							<p style="font-size: 0.75em;" id="tamanho">Grande<br>35cm<br>8 Fatias</p>
 						</div>
 					</div>
 				</div>
-				<div class="card rounded txt-center" data-target="numeroSabores" data-toggle="modal">
-					2 Sabores
+				<div class="card rounded txt-center" id="numSabores" data-target="quantidadeSabores" data-toggle="modal">
 				</div>
 			</div>
 		</div>
@@ -54,37 +50,7 @@
 						<div class="sabor2" data-target="sabor2" data-toggle="modal">
 						</div>
 					</div> -->
-					<div class="pizza">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 344">
-
-							<defs>
-
-								<pattern id="sabor1" patternUnits="userSpaceOnUse" width="100%" height="100%">
-									<image xlink:href="img/pizza.png" x="0" y="-22" width="100%" height="100%" />
-								</pattern>
-
-								<pattern id="sabor2" patternUnits="userSpaceOnUse" width="100%" height="100%">
-									<image xlink:href="img/pizza2.png" x="-72" y="0" width="100%" height="100%" />
-								</pattern>
-
-								<pattern id="sabor3" patternUnits="userSpaceOnUse" width="100%" height="100%">
-									<image xlink:href="img/pizza3.png" x="-72" y="-144" width="100%" height="100%" />
-								</pattern>
-
-								<style>.a{fill:url(#sabor1);}.b{fill:url(#sabor2);}.c{fill:url(#sabor3);}</style>
-
-							</defs>
-
-							<g transform="translate(-512 -208)">
-
-								<path d="M27.361,236.658m-4.838,2.689a168.235,168.235,0,0,0,62.9,62.93l86.555-148.989L85.961,4.3C4.244,51.632-24.249,157.591,22.523,239.347Z" transform="translate(511.987 226.828)" fill="url(#sabor1)" data-target="sabores" data-toggle="modal"/>
-
-								<path d="M102.017,5.379m0-5.379A173.3,173.3,0,0,0,16,23.128l86.017,148.989H274.052C274.052,77.453,196.1,0,102.017,0Z" transform="translate(581.948 208)" fill="url(#sabor2)" data-target="sabores" data-toggle="modal"/>
-
-								<path d="M246.1,115.369m4.838,2.689A173.512,173.512,0,0,0,274.052,32H102.017L16,180.989c81.717,47.332,187.625,18.825,234.935-62.93Z" transform="translate(581.948 348.117)" fill="url(#sabor3)" data-target="sabores" data-toggle="modal"/>
-								
-							</g>
-						</svg>
+					<div id="pizza">
 					</div>
 				</div>
 			</div>
@@ -93,10 +59,10 @@
 	<section class="grid">
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded txt-center" data-target="tipoMassa" data-toggle="modal">
+				<!-- <div class="card rounded txt-center" id="dough" data-target="tipoMassa" data-toggle="modal">
 					Massa Tradicionail
-				</div>
-				<div class="card rounded txt-center" data-target="tipoBorda" data-toggle="modal">
+				</div> -->
+				<div class="card rounded txt-center" id="borda" data-target="tipoBorda" data-toggle="modal">
 					Borda Catupiry
 				</div>
 				<div class="txt-center">
@@ -111,44 +77,44 @@
 		</div>
 	</section>
 
-	<!--Modais-->
 
-	<div id="tamanho" class="modal">
+
+
+
+
+	<!-- Modais -->
+
+
+
+
+
+	<div id="tamanhoPizza" class="modal">
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded" style="position: relative;">
+				<div class="card rounded" style="position: relative;" onclick="size = 'Media'; $('#tamanho').text(size);">
 					<div class="gambis" data-dismiss="modal"></div>
 					<div style="display: grid; grid-template-columns: 3em 1fr;">	
 						<img src="img/pizza-grande.svg" style="width: 48px;">
 						<div style="padding-left: 1.5em; align-content: center; display: grid;">
-							<label>
-								Média
-							</label>
-							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+							<p style="font-size: 0.75em;">Grande<br>35cm<br>8 Fatias</p>
 						</div>
 					</div>
 				</div>
-				<div class="card rounded" style="position: relative;">
+				<div class="card rounded" style="position: relative;" onclick="size = 'Grande'; $('#tamanho').text(size);">
 					<div class="gambis" data-dismiss="modal"></div>
 					<div style="display: grid; grid-template-columns: 3em 1fr;">	
 						<img src="img/pizza-grande.svg" style="width: 48px;">
 						<div style="padding-left: 1.5em; align-content: center; display: grid;">
-							<label>
-								Grande
-							</label>
-							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+							<p style="font-size: 0.75em;">Grande<br>35cm<br>8 Fatias</p>
 						</div>
 					</div>
 				</div>
-				<div class="card rounded" style="position: relative;">
+				<div class="card rounded" style="position: relative;" onclick="size = 'Gigante'; $('#tamanho').text(size);">
 					<div class="gambis" data-dismiss="modal"></div>
 					<div style="display: grid; grid-template-columns: 3em 1fr;">	
 						<img src="img/pizza-grande.svg" style="width: 48px;">
 						<div style="padding-left: 1.5em; align-content: center; display: grid;">
-							<label>
-								Gigante
-							</label>
-							<p style="font-size: 0.75em;">35cm - 8 Fatias</p>
+							<p style="font-size: 0.75em;">Grande<br>35cm<br>8 Fatias</p>
 						</div>
 					</div>
 				</div>
@@ -161,60 +127,63 @@
 		</nav>
 	</div>
 
-	<div id="numeroSabores" class="modal">
+	<div id="quantidadeSabores" class="modal">
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded" data-dismiss="modal">
-					1 Sabores
+				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '1 Sabor'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(umSabor);">
+					1 Sabor
 				</div>
-				<div class="card rounded" data-dismiss="modal">
+				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '2 Sabores'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(doisSabores);">
 					2 Sabores
 				</div>
-				<div class="card rounded" data-dismiss="modal">
+<!-- 				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '3 Sabores'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(tresSabor)">
 					3 Sabores
 				</div>
-			</div>
+				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '4 Sabores'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(quatroSabor)">
+					4 Sabores
+				</div> -->
 		</div>
 		<nav class="nav-inferior">
 			<button data-dismiss="modal" class="botao-acao">
 				Fechar
 			</button>
 		</nav>
+	</div>
 	</div>
 
 	<div id="sabores" class="modal">
 		<ul class="cardapio">
-			<li data-dismiss="modal">
+			<li onclick="var sabor1 = 'Mussarela';" data-dismiss="modal">
 				<div class="descricao">
-					<h2>Titulo</h2>
+					<h2>Mussarela</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+			<li onclick="var sabor1 = 'Calabresa';" data-dismiss="modal">
+				<div class="descricao">
+					<h2>Calabresa</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+			<li data-dismiss="modal" onclick="var sabor1 = 'Portguesa';">
+				<div class="descricao">
+					<h2>Portuguesa</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza1.png" class="img-fluid">
+			</li>
+			<li data-dismiss="modal" onclick="var sabor1 = 'Margherita';">
+				<div class="descricao">
+					<h2>Margherita</h2>
 					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				</div>
 				<img src="img/pizza1.png" class="img-fluid">
 			</li>
 			<li data-dismiss="modal">
 				<div class="descricao">
-					<h2>Titulo</h2>
-					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-				</div>
-				<img src="img/pizza1.png" class="img-fluid">
-			</li>
-			<li data-dismiss="modal">
-				<div class="descricao">
-					<h2>Titulo</h2>
-					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-				</div>
-				<img src="img/pizza1.png" class="img-fluid">
-			</li>
-			<li data-dismiss="modal">
-				<div class="descricao">
-					<h2>Titulo</h2>
-					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-				</div>
-				<img src="img/pizza1.png" class="img-fluid">
-			</li>
-			<li data-dismiss="modal">
-				<div class="descricao">
-					<h2>Titulo</h2>
+					<h2>Frango com Catupiry</h2>
 					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				</div>
 				<img src="img/pizza1.png" class="img-fluid">
@@ -227,40 +196,27 @@
 		</nav>
 	</div>
 
-	<div id="tipoMassa" class="modal">
-		<div class="wrap">
-			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded txt-center" data-dismiss="modal">
-					Tradicional
-				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
-					Vegana
-				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
-					Integral
-				</div>
-			</div>
-		</div>
-		<nav class="nav-inferior">
-			<button data-dismiss="modal" class="botao-acao">
-				Fechar
-			</button>
-		</nav>
-	</div>
-
 	<div id="tipoBorda" class="modal">
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded txt-center" data-dismiss="modal">
+				<div class="card rounded txt-center" data-dismiss="modal"
+				onclick="crust = 'Catupiry';
+				$('#borda').text(crust);">
 					Catupiry
 				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
+				<div class="card rounded txt-center" data-dismiss="modal"
+				onclick="crust = 'Cheddar';
+				$('#borda').text(crust);">
 					Cheddar
 				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
+				<div class="card rounded txt-center" data-dismiss="modal"
+				onclick="crust = 'Chocolate';
+				$('#borda').text(crust);">
 					Chocolate
 				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
+				<div class="card rounded txt-center" data-dismiss="modal"
+				onclick="crust = 'Nenhum';
+				$('#borda').text(crust);">
 					Nenhum
 				</div>
 			</div>
@@ -272,30 +228,5 @@
 		</nav>
 	</div>
 
-	<div id="ingredientes" class="modal">
-		<div class="wrap">
-			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded txt-center" data-dismiss="modal">
-					Catupiry
-				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
-					Cheddar
-				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
-					Chocolate
-				</div>
-				<div class="card rounded txt-center" data-dismiss="modal">
-					Nenhum
-				</div>
-			</div>
-		</div>
-		<nav class="nav-inferior">
-			<button data-dismiss="modal" class="botao-acao">
-				Fechar
-			</button>
-		</nav>
-	</div>
-
-	<script type="application/javascript" src="js.js"></script>
 </body>
-</html> 
+</html>
