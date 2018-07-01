@@ -4,9 +4,9 @@
 $con = @mysqli_connect('localhost', 'pizzapizza', 'facapartedesseahto', 'kiuipizza');
 if (!$con) {
     echo "Error: " . mysqli_connect_error();
-  exit();
+    exit();
 }
-$sql  = 'select * from pedido inner join pedido_has_pizza on pedido_has_pizza.pedido_ID = pedido.ID inner join pizza on pizza.id = pedido_has_pizza.pizza_id inner join pizza_has_sabor on pizza_has_sabor.pizza_id = pizza.id inner join sabor on sabor.idsabor = pizza_has_sabor.sabor_idsabor;';
+$sql  = 'select * from pedido inner join pedido_has_pizza on pedido_has_pizza.pedido_ID = pedido.ID inner join pizza on pizza.id = pedido_has_pizza.pizza_id inner join pizza_has_sabor on pizza_has_sabor.pizza_id = pizza.id inner join sabor on sabor.idsabor = pizza_has_sabor.sabor_idsabor order by pedido.ID ;';
 $query  = mysqli_query($con, $sql);
 $pedido = array();
 while ($row = mysqli_fetch_array($query)){
@@ -25,7 +25,7 @@ $n_de_pedidos = count($pedido);
       <div class="col">
   <?php
   for($i = 1;$i < $n_de_pedidos;$i++){
-    if($i != 1 && $last_id != $pedido[$i]['ID']) echo "   </table>";
+    if($i != 1 && $last_id != $pedido[$i]['ID']) echo "</table>";
     if($last_id != $pedido[$i]['ID'] && $pedido[$i]['status'] == 1){
       $last_id = $pedido[$i]['ID'];
       ?>
