@@ -29,11 +29,11 @@ sabor2 = $("#sabor2").val();
 sabor3 = $("#sabor3").val();
 
 size = 'Grande';
-quantidadeSabores = '2 Sabores';
+nSabores = '2';
 dough = 'Massa Tradicional';
 crust = 'Chocolate';
 
-$("#numSabores").text(quantidadeSabores);
+$("#quantidadeSabores").text(nSabores);
 $("#tamanho").text(size);
 $("#massa").text(dough);
 $("#borda").text(crust);
@@ -59,18 +59,3 @@ var userInfo = {userName: userName, userEmail: userEmail};
 var userAdress = {userZipcode: userZipcode, userCity: userCity, userDistrict: userDistrict, userStreet: userStreet, userStreetNumber: userStreetNumber, userComplement : userComplement};
 // var orderAdress = {oderZipcode: oderZipcode, oderCity: oderCity, oderDistrict: oderDistrict, oderStreet: oderStreet, oderStreetNumber: oderStreetNumber, oderComplement : oderComplement};
 // var order = {userInfo, orderAdress};
-
-switch(quantidadeSabores) {
-    case 1:
-        $("#pizza").html(umSabor);
-        break;
-    case 2:
-        $("#pizza").html(doisSabores);
-        break;
-    case 3:
-        $("#pizza").html(tresSabores);
-        break;
-    case 4:
-        $("#pizza").html(quatroSabores);
-        break;
-}

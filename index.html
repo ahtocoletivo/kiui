@@ -8,9 +8,9 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  	<script type="application/javascript" src="pizzas.js" defer></script>
-  	<script type="application/javascript" src="js.js" defer></script>
+	src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="application/javascript" src="pizzas.js" defer></script>
+	<script type="application/javascript" src="js.js" defer></script>
 
 	<style>
 	<button { padding: 15px; font-size: 12px; background: indianred; color: #FFF; border: none }
@@ -30,7 +30,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="card rounded txt-center" id="numSabores" data-target="quantidadeSabores" data-toggle="modal">
+				<div class="card rounded txt-center" id="quantidadeSabores" data-target="numSabores" data-toggle="modal">
+					2 Sabores
 				</div>
 			</div>
 		</div>
@@ -127,28 +128,28 @@
 		</nav>
 	</div>
 
-	<div id="quantidadeSabores" class="modal">
+	<div id="numSabores" class="modal">
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '1 Sabor'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(umSabor);">
+				<div id="umSabor" class="card rounded" data-dismiss="modal">
 					1 Sabor
 				</div>
-				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '2 Sabores'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(doisSabores);">
+				<div id="doisSabores" class="card rounded" data-dismiss="modal">
 					2 Sabores
 				</div>
-<!-- 				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '3 Sabores'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(tresSabor)">
+				<div id="tresSabores" class="card rounded" data-dismiss="modal">
 					3 Sabores
 				</div>
-				<div class="card rounded" data-dismiss="modal" onclick="quantidadeSabores = '4 Sabores'; $('#numSabores').text(quantidadeSabores); $('#pizza').hmtl(quatroSabor)">
+				<div id="quatroSabores" class="card rounded" data-dismiss="modal">
 					4 Sabores
-				</div> -->
+				</div>
+			</div>
+			<nav class="nav-inferior">
+				<button data-dismiss="modal" class="botao-acao">
+					Fechar
+				</button>
+			</nav>
 		</div>
-		<nav class="nav-inferior">
-			<button data-dismiss="modal" class="botao-acao">
-				Fechar
-			</button>
-		</nav>
-	</div>
 	</div>
 
 	<div id="sabores" class="modal">
@@ -202,31 +203,31 @@
 				<div class="card rounded txt-center" data-dismiss="modal"
 				onclick="crust = 'Catupiry';
 				$('#borda').text(crust);">
-					Catupiry
+				Catupiry
 				</div>
 				<div class="card rounded txt-center" data-dismiss="modal"
 				onclick="crust = 'Cheddar';
 				$('#borda').text(crust);">
-					Cheddar
+				Cheddar
 				</div>
 				<div class="card rounded txt-center" data-dismiss="modal"
 				onclick="crust = 'Chocolate';
 				$('#borda').text(crust);">
-					Chocolate
+				Chocolate
 				</div>
 				<div class="card rounded txt-center" data-dismiss="modal"
 				onclick="crust = 'Nenhum';
 				$('#borda').text(crust);">
-					Nenhum
+				Nenhum
 				</div>
 			</div>
-		</div>
-		<nav class="nav-inferior">
-			<button data-dismiss="modal" class="botao-acao">
-				Fechar
-			</button>
-		</nav>
 	</div>
+<nav class="nav-inferior">
+	<button data-dismiss="modal" class="botao-acao">
+		Fechar
+	</button>
+</nav>
+</div>
 
 </body>
 </html>
