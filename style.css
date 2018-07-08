@@ -5,7 +5,7 @@
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
 	color: var(--dark);
-	/*	border: 1px solid red;*/
+	border: 0.5px solid red;
 }
 
 a {
@@ -101,13 +101,13 @@ section,
 	grid-template-rows: 1fr;
 }
 
-.pizza {
+#pizza {
 	position: absolute;
 	display: grid;
 	width: calc(100% - 2em);
 	height: calc(100% - 2em);
 	margin: 1em;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	grid-gap: 0.25em;
 }
