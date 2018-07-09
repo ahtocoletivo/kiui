@@ -26,7 +26,7 @@ $n_de_pedidos = count($pedido);
   <?php
   for($i = 1;$i < $n_de_pedidos;$i++){
     if($i != 1 && $last_id != $pedido[$i]['ID']) echo "</table>";
-    if($last_id != $pedido[$i]['ID'] && $pedido[$i]['status'] == 2){
+    if($last_id != $pedido[$i]['ID'] && $pedido[$i]['status'] == 1){
       $last_id = $pedido[$i]['ID'];
       ?>
       <table class="card">
@@ -42,7 +42,7 @@ $n_de_pedidos = count($pedido);
           <td class="concluir">
             <button onclick='
             $.ajax({
-              url: "<?php echo "http://pizza.ahto.digital/apir.php?update=1&status=3&id=" . $pedido[$i]['ID'];?>"
+              url: "<?php echo "http://pizza.ahto.digital/apir.php?update=1&status=2&id=" . $pedido[$i]['ID'];?>"
             });
             window.location.reload(true);'>
               <i class="material-icons" style="color:#29CCB1; ">
@@ -79,7 +79,7 @@ $n_de_pedidos = count($pedido);
         </tr>
       <?php
     }else{
-      if($pedido[$i]['status'] == 2){
+      if($pedido[$i]['status'] == 1){
       ?>
 
       <tr>
