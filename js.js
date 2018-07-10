@@ -24,20 +24,6 @@
     }
 }, false);
 
-sabor1 = $("#sabor1").val();
-sabor2 = $("#sabor2").val();
-sabor3 = $("#sabor3").val();
-
-size = 'Grande';
-nSabores = '2';
-dough = 'Massa Tradicional';
-crust = 'Chocolate';
-
-$("#quantidadeSabores").text(nSabores);
-$("#tamanho").text(size);
-$("#massa").text(dough);
-$("#borda").text(crust);
-
 var userName = $("#userName").val();
 var userEmail = $("#userEmail").val();
 var userPhone = $("#userPhone").val();

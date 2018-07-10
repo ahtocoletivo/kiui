@@ -9,8 +9,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<script
 	src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="application/javascript" src="js.js"></script>
 	<script type="application/javascript" src="pizzas.js" defer></script>
-	<script type="application/javascript" src="js.js" defer></script>
 
 	<style>
 	<button { padding: 15px; font-size: 12px; background: indianred; color: #FFF; border: none }
@@ -40,29 +40,21 @@
 	<section class="grid">
 		<div class="wrap">
 			<div class="um">
+
 				<div class="tabua">
 					<img src="img/tabua.png" class="img-fluid">
-<!-- 					<div class="pizza">
-						<div class="sabor1" data-target="sabor1" data-toggle="modal">
-							<i class="material-icons move" style="font-size: 3em; color: #fff;" data-target="sabor1" data-toggle="modal">
-								touch_app
-							</i>
-						</div>
-						<div class="sabor2" data-target="sabor2" data-toggle="modal">
-						</div>
-					</div> -->
 					<div id="pizza">
 					</div>
 				</div>
+
+				<p id="saboresPizza">
+				</p>
 			</div>
 		</div>
 	</section>
 	<section class="grid">
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
-				<!-- <div class="card rounded txt-center" id="dough" data-target="tipoMassa" data-toggle="modal">
-					Massa Tradicionail
-				</div> -->
 				<div class="card rounded txt-center" id="borda" data-target="tipoBorda" data-toggle="modal">
 					Borda Catupiry
 				</div>
@@ -152,43 +144,52 @@
 		</div>
 	</div>
 
-	<div id="sabores" class="modal">
+
+
+
+
+
+
+
+
+	<div id="cardapio" class="modal">
 		<ul class="cardapio">
-			<li onclick="var sabor1 = 'Mussarela';" data-dismiss="modal">
-				<div class="descricao">
-					<h2>Mussarela</h2>
-					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-				</div>
-				<img src="img/pizza1.png" class="img-fluid">
-			</li>
-			<li onclick="var sabor1 = 'Calabresa';" data-dismiss="modal">
+			<li id="calaresa">
+				<div class="gambis" data-dismiss="modal"></div>
 				<div class="descricao">
 					<h2>Calabresa</h2>
 					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				</div>
-				<img src="img/pizza1.png" class="img-fluid">
+				<img src="img/pizza2.png" class="img-fluid">
 			</li>
-			<li data-dismiss="modal" onclick="var sabor1 = 'Portguesa';">
+
+			<li id="mussarela">
+				<div class="gambis" data-dismiss="modal"></div>
+				<div class="descricao">
+					<h2>Mussarela</h2>
+					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				</div>
+				<img src="img/pizza2.png" class="img-fluid">
+			</li>
+
+			<li id="portuguesa">
+				<div class="gambis" data-dismiss="modal"></div>
 				<div class="descricao">
 					<h2>Portuguesa</h2>
 					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				</div>
-				<img src="img/pizza1.png" class="img-fluid">
+				<img src="img/pizza2.png" class="img-fluid">
 			</li>
-			<li data-dismiss="modal" onclick="var sabor1 = 'Margherita';">
+
+			<li id="peperoni">
+				<div class="gambis" data-dismiss="modal"></div>
 				<div class="descricao">
-					<h2>Margherita</h2>
+					<h2>Peperoni</h2>
 					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				</div>
-				<img src="img/pizza1.png" class="img-fluid">
+				<img src="img/pizza2.png" class="img-fluid">
 			</li>
-			<li data-dismiss="modal">
-				<div class="descricao">
-					<h2>Frango com Catupiry</h2>
-					<p style="font-size: 0.75em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-				</div>
-				<img src="img/pizza1.png" class="img-fluid">
-			</li>
+
 		</ul>
 		<nav class="nav-inferior">
 			<button data-dismiss="modal" class="botao-acao">
@@ -197,37 +198,37 @@
 		</nav>
 	</div>
 
+
+
+
+
+
+
+
+
 	<div id="tipoBorda" class="modal">
 		<div class="wrap">
 			<div class="um" style="padding: 1.5em;">
-				<div class="card rounded txt-center" data-dismiss="modal"
-				onclick="crust = 'Catupiry';
-				$('#borda').text(crust);">
-				Catupiry
+				<div id="bordaCaturipy"class="card rounded txt-center" data-dismiss="modal">
+					Catupiry
 				</div>
-				<div class="card rounded txt-center" data-dismiss="modal"
-				onclick="crust = 'Cheddar';
-				$('#borda').text(crust);">
-				Cheddar
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Cheddar
 				</div>
-				<div class="card rounded txt-center" data-dismiss="modal"
-				onclick="crust = 'Chocolate';
-				$('#borda').text(crust);">
-				Chocolate
+				<div class="card rounded txt-center" data-dismiss="modal">
+					Chocolate
 				</div>
-				<div class="card rounded txt-center" data-dismiss="modal"
-				onclick="crust = 'Nenhum';
-				$('#borda').text(crust);">
-				Nenhum
+				<div class="card rounded txt-center" data-dismiss="modal" >
+					Nenhum
 				</div>
 			</div>
+		</div>
+		<nav class="nav-inferior">
+			<button data-dismiss="modal" class="botao-acao">
+				Fechar
+			</button>
+		</nav>
 	</div>
-<nav class="nav-inferior">
-	<button data-dismiss="modal" class="botao-acao">
-		Fechar
-	</button>
-</nav>
-</div>
 
 </body>
 </html>
