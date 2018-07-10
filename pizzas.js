@@ -19,22 +19,7 @@ var current = 0;
 
 // Identifica qual fatia foi selecionada
 
-$("#pizza>svg>#saborA").click(function(){
-	current = this.id
-	alert('Você selecionou o ' + current);
-});
-
-$("#pizza>svg>#saborB").click(function(){
-	current = this.id
-	alert('Você selecionou o ' + current);
-});
-
-$("#pizza>svg>#saborC").click(function(){
-	current = this.id
-	alert('Você selecionou o ' + current);
-});
-
-$("#pizza>svg>#saborD").click(function(){
+$("#pizza>svg>[id^='sabor']").click(function(){
 	current = this.id
 	alert('Você selecionou o ' + current);
 });
@@ -45,6 +30,8 @@ $("#cardapio>ul>li").click(function(){
 	if (current == "saborA") {
     	saborPizza[0] = this.id;
     	$("#saboresPizza").html(saborPizza[0]);
+    	alert('Você selecionou o sabor ' + saborPizza[0]);
+    	$("#pizza>svg>#saborA>image").attr('xlink:href', this.id.src);
     	// $('#pizza>svg>defs>pattern>#fillSaborA').attr('xlink:href', this.id.src);
     }
 });
