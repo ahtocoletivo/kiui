@@ -5,7 +5,7 @@
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
 	color: var(--dark);
-	border: 0.5px solid red;
+	/*border: 0.5px solid red;*/
 }
 
 a {
@@ -119,6 +119,7 @@ section,
 }
 
 .cardapio li {
+	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 128px;
 	background-color: #FFFCF7;
