@@ -22,6 +22,7 @@ var current = 0;
 $("#cardapio>ul>li").click(function(){
 	if (current == "saborA") {
     	saborPizza[0] = this.id;
+			console.log($(this).children("img").attr('src'));
     	$("#saboresPizza").html(saborPizza[0]);
     	alert('Você selecionou o sabor ' + saborPizza[0]);
     	$("#pizza>svg>#saborA>image").attr('xlink:href', this.id.src);
