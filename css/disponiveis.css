@@ -1,0 +1,82 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://source.unsplash.com/random);
+  background-size: cover;
+  height: 100vh;
+}
+#container{
+  height: 100vh;
+  overflow: scroll;
+}
+button {
+  background-color: #0002;
+  min-width: 10vw;
+  height: 30px;
+  border: none;
+  border-radius: 90px;
+  color: #fff;
+}
+
+table {
+  color: #fff;
+  font-weight: 100;
+  margin: 10vh 15vw 0;
+  border-spacing: 0;
+  background: linear-gradient(-68deg, #ac32e4d0, #4801ffff);
+  height: 100vh;
+  overflow: scroll;
+  border-radius: 20px;
+  text-transform: capitalize;
+  width: 70vw;
+}
+
+.enabled {
+  background-color: #3aa3;
+}
+
+.disabled {
+  background-color: #a333;
+}
+
+tr,
+td {
+  margin: 0;
+  height: 50px;
+  border: none;
+}
+
+tr:hover {
+  background: #fff3;
+}
+
+td {
+  padding: 0 10px;
+}
+
+.titles td {
+  background: #fff3;
+  border-radius: 0;
+}
+.titles td:first-child {
+  background: #fff3;
+  border-top-left-radius: 20px;
+}
+
+.titles td:last-child {
+  background: #fff3;
+  border-top-right-radius: 20px;
+}
+tr td img {
+  max-width: 5vw;
+}
+input{
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+}
+input::placeholder {
+  color: #fffa;
+}

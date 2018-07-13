@@ -19,11 +19,48 @@ switch ($op) {
 	case "assoc_pedido_pizza":
 		assoc_pedido_pizza($_GET['pedido'], $_GET['pizza']);
 		break;
+	case "ativa_pizza":
+			ativa_pizza($_GET['id']);
+			break;
+	case "desativa_pizza":
+			desativa_pizza($_GET['id']);
+			break;
+	case "insere_pizza_available":
+			insere_pizza_available($_GET['nome'],$_GET['custo_grande'],$_GET['ativa']);
+			break;
+	case "deleta_pizza_available":
+			deleta_pizza_available($_GET['id']);
+			break;
 }
 function add_pedido($forma_de_pgto, $troco, $total, $origem){
 	global $con;
 	$query = "insert into pedido (hora_pedido, total, forma_de_pgto, troco, status, origem)
   values (now(), " . $total . ", " . $forma_de_pgto . ", " . $troco . ", 1, " . $origem . ")";
+	echo run_query($query, true);
+}
+
+function insere_pizza_available($nome, $custo_grande, $ativa){
+	global $con;
+	$query = "insert into pizzas_available (nome,custo_grande,ativo) values ('" . $nome . "', " . $custo_grande . ", " . $ativa . ")";
+	echo run_query($query, true);
+}
+
+function deleta_pizza_available($id){
+	global $con;
+	$query = "delete from pizzas_available where idpizzas_available = " . $id;
+	echo $query;
+	echo run_query($query, true);
+}
+
+function ativa_pizza($id){
+	global $con;
+	$query = "update pizzas_available set ativo = 1 where idpizzas_available = " . $id;
+	echo run_query($query, true);
+}
+
+function desativa_pizza($id){
+	global $con;
+	$query = "update pizzas_available set ativo = 0 where idpizzas_available = " . $id;
 	echo run_query($query, true);
 }
 
