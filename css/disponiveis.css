@@ -23,14 +23,14 @@ button {
 table {
   color: #fff;
   font-weight: 100;
-  margin: 10vh 15vw 0;
+  margin: 0;
   border-spacing: 0;
   background: linear-gradient(-68deg, #ac32e4d0, #4801ffff);
   height: 100vh;
   overflow: scroll;
   border-radius: 20px;
   text-transform: capitalize;
-  width: 70vw;
+  min-width: 70vw;
 }
 
 .enabled {
@@ -45,6 +45,7 @@ tr,
 td {
   margin: 0;
   height: 50px;
+  text-align: left;
   border: none;
 }
 

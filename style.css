@@ -19,7 +19,7 @@ p {
 }
 
 :root {
-	--primary: #823DCC;																																																		
+	--primary: #823DCC;
 	--white: #fff;
 	--light: #F9FAFC;
 	--dark: #212329;
@@ -161,7 +161,7 @@ section,
 	justify-content: center;
 	bottom: 0;
 	width: 100%;
-	
+
 }
 
 .botao-acao {
@@ -210,7 +210,7 @@ section,
 
 
 
-/* 
+/*
 ===============
 ===== FORM ====
 ===============
@@ -244,7 +244,7 @@ label {
 	z-index: 2;
 	font-size: 12px;
 }
- 
+
 textarea{
     border: 1px solid #000000;
     background:#cccccc;
@@ -253,7 +253,7 @@ textarea{
     border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;    
+    box-shadow: 1px 1px 2px #333333;
     -moz-box-shadow: 1px 1px 2px #333333;
     -webkit-box-shadow: 1px 1px 2px #333333;
 }
@@ -275,7 +275,7 @@ input[type=checkbox] {
 input[type=checkbox] ~ label {
 	position: relative;
 }
-input[type=checkbox]:checked ~ label { 
+input[type=checkbox]:checked ~ label {
   background-color: #ccff00;
 }
 
@@ -344,4 +344,15 @@ input[type=checkbox]:checked ~ label {
 
 .open {
     display: block;
+}
+
+@media (min-width: 700px){
+	html, body {
+		display: grid;
+		width: 60%;
+		margin: auto;
+		min-height: 100vh;
+		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
+	}
 }
